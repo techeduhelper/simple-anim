@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(12, 24, 38);
+      }
+      a {
+        text-decoration: none;
+        padding: 20px 30px;
+        border: 4px solid goldenrod;
+        font-weight: 600;
+        font-style: italic;
+        border-radius: 10px;
+        font-size: 1.5rem;
+        color: white;
+        text-transform: uppercase;
+        position: relative;
+        overflow: hidden;
+      }
+      .wave {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 100%;
+        left: 0;
+        transition: all 1.2s;
+      }
+      .wave::before {
+        content: "";
+        width: 100%;
+        height: 80px;
+        z-index: -1;
+        background-image: url("../img/btn-anim.png");
+        position: absolute;
+        animation: anima 3s linear 1s infinite alternate;
+        opacity: 0.2;
+      }
+      @keyframes anima {
+        0% {
+          background-position-x: 0;
+        }
+        100% {
+          background-position-x: 400px;
+        }
+      }
+
+      a:hover .wave {
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#"
+      >Make me anything
+      <div class="wave"></div
+    ></a>
+  </body>
+</html>
